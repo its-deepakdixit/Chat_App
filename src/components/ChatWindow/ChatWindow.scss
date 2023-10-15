@@ -1,0 +1,145 @@
+@import '../../utils/variables';
+
+.chatContainer {
+  background-color: $light;
+  width: 80vw;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+
+  .chatWindow {
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .userInfo {
+    padding: 0.7rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-light;
+
+    .iconRow{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .icon {
+      margin-right: 0.35rem;
+      transition: linear 200ms;
+      
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+      }
+    }
+
+    .userDetails {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.4rem;
+
+      .avatar {
+        background-color: $avatar;
+        color: $white;
+        font-size: 1.5rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.7rem;
+      }
+
+      .name {
+        overflow: hidden;
+      }
+    }
+  }
+
+  .texts {
+    padding: 0.9em 1.5em;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+    // background-color: rebeccapurple;
+  }
+
+  .inputContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-self: flex-end;
+    justify-content: center;
+    margin-top: 0.5em;
+    padding: 1em;
+    border-bottom-right-radius: 0.5em;
+    // border-top: 1px solid $grey-light;
+    background-color: $secondary-light;
+
+    .messageInput {
+      outline: none;
+      border-top-width: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+      border-bottom-width: 0.4px;
+      border-bottom-color: $grey-light;
+      padding: 0.4rem 0.6rem;
+      background-color: transparent;
+      flex: 1;
+      max-width: 95%;
+      min-width: 85%;
+      min-height: 25px;
+      max-height: 100px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      cursor: text;
+    }
+
+    .sendButton {
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      outline: none;
+      transition: linear 200ms;
+      flex: 1;
+      border-radius: 2px;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
+
+.noChat {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  width: 50vw;
+  height: 75vh;
+  margin-top: 3.5em;
+  color: $primary-dark;
+
+  .altImage {
+    object-fit: contain;
+    overflow: hidden;
+    width: 50vw;
+    height: 75vh;
+  }
+}
